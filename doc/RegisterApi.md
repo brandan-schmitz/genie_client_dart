@@ -1,11 +1,11 @@
-# makerspacegenie_client_dart.api.RegisterApi
+# genie_client_dart.api.RegisterApi
 
 ## Load the API package
 ```dart
-import 'package:makerspacegenie_client_dart/api.dart';
+import 'package:genie_client_dart/api.dart';
 ```
 
-All URIs are relative to *https://genie-api.celestialdata.net*
+All URIs are relative to *https://genie-api-dev.celestialdata.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ### Example 
 ```dart
-import 'package:makerspacegenie_client_dart/api.dart';
+import 'package:genie_client_dart/api.dart';
 
 var api_instance = RegisterApi();
 var user = User(); // User | 

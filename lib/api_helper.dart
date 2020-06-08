@@ -1,4 +1,4 @@
-part of makerspacegenie_client_dart.api;
+part of genie_client_dart.api;
 
 const _delimiters = const {'csv': ',', 'ssv': ' ', 'tsv': '\t', 'pipes': '|'};
 

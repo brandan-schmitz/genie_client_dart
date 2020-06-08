@@ -1,4 +1,4 @@
-library makerspacegenie_client_dart.api;
+library genie_client_dart.api;
 
 import 'dart:async';
 import 'dart:convert';

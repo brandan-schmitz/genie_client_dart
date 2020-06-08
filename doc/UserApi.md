@@ -1,11 +1,11 @@
-# makerspacegenie_client_dart.api.UserApi
+# genie_client_dart.api.UserApi
 
 ## Load the API package
 ```dart
-import 'package:makerspacegenie_client_dart/api.dart';
+import 'package:genie_client_dart/api.dart';
 ```
 
-All URIs are relative to *https://genie-api.celestialdata.net*
+All URIs are relative to *https://genie-api-dev.celestialdata.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 ### Example 
 ```dart
-import 'package:makerspacegenie_client_dart/api.dart';
+import 'package:genie_client_dart/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
@@ -64,7 +64,7 @@ void (empty response body)
 
 ### Example 
 ```dart
-import 'package:makerspacegenie_client_dart/api.dart';
+import 'package:genie_client_dart/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
@@ -102,7 +102,7 @@ void (empty response body)
 
 ### Example 
 ```dart
-import 'package:makerspacegenie_client_dart/api.dart';
+import 'package:genie_client_dart/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
@@ -144,7 +144,7 @@ void (empty response body)
 
 ### Example 
 ```dart
-import 'package:makerspacegenie_client_dart/api.dart';
+import 'package:genie_client_dart/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 

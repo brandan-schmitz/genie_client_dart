@@ -1,6 +1,6 @@
-name: makerspacegenie_client_dart
-version: v0.1.0
-description: A Dart API Client for the Makerspace Genie API project.
+name: genie_client_dart
+version: 0.1.1
+description: A dart client for the genie_api project
 authors:
   - Author <author@homepage>
 homepage: homepage

@@ -1,8 +1,8 @@
-# makerspacegenie_client_dart.model.User
+# genie_client_dart.model.User
 
 ## Load the model package
 ```dart
-import 'package:makerspacegenie_client_dart/api.dart';
+import 'package:genie_client_dart/api.dart';
 ```
 
 ## Properties

@@ -1,11 +1,11 @@
-# makerspacegenie_client_dart.api.AuthApi
+# genie_client_dart.api.AuthApi
 
 ## Load the API package
 ```dart
-import 'package:makerspacegenie_client_dart/api.dart';
+import 'package:genie_client_dart/api.dart';
 ```
 
-All URIs are relative to *https://genie-api.celestialdata.net*
+All URIs are relative to *https://genie-api-dev.celestialdata.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ### Example 
 ```dart
-import 'package:makerspacegenie_client_dart/api.dart';
+import 'package:genie_client_dart/api.dart';
 // TODO Configure HTTP basic authorization: oauth2-client-authentication
 //defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2-client-authentication').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2-client-authentication').password = 'YOUR_PASSWORD';

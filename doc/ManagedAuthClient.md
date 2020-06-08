@@ -1,8 +1,8 @@
-# makerspacegenie_client_dart.model.ManagedAuthClient
+# genie_client_dart.model.ManagedAuthClient
 
 ## Load the model package
 ```dart
-import 'package:makerspacegenie_client_dart/api.dart';
+import 'package:genie_client_dart/api.dart';
 ```
 
 ## Properties

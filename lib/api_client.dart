@@ -1,4 +1,4 @@
-part of makerspacegenie_client_dart.api;
+part of genie_client_dart.api;
 
 class QueryParam {
   String name;
@@ -17,7 +17,7 @@ class ApiClient {
   final _regList = RegExp(r'^List<(.*)>$');
   final _regMap = RegExp(r'^Map<String,(.*)>$');
 
-  ApiClient({this.basePath = "https://genie-api.celestialdata.net"}) {
+  ApiClient({this.basePath = "https://genie-api-dev.celestialdata.net"}) {
     // Setup authentications (key: authentication name, value: authentication).
     _authentications['oauth2'] = OAuth();
     _authentications['oauth2-client-authentication'] = HttpBasicAuth();
