@@ -1,0 +1,24 @@
+# makerspacegenie_client_dart.model.ManagedAuthToken
+
+## Load the model package
+```dart
+import 'package:makerspacegenie_client_dart/api.dart';
+```
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **int** | This is the primary identifier for this object.  | [optional] [default to null]
+**code** | **String** | No two objects may have the same value for this field.  | [optional] [default to null]
+**accessToken** | **String** | No two objects may have the same value for this field.  | [optional] [default to null]
+**refreshToken** | **String** | No two objects may have the same value for this field.  | [optional] [default to null]
+**scope** | **String** |  | [optional] [default to null]
+**issueDate** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
+**expirationDate** | [**DateTime**](DateTime.md) |  | [optional] [default to null]
+**type** | **String** |  | [optional] [default to null]
+**resourceOwner** | [**ResourceOwner**](ResourceOwner.md) |  | [optional] [default to null]
+**client** | [**Client**](Client.md) |  | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
