@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **createUser**
-> createUser(user)
+> User createUser(user)
 
 
 
@@ -25,7 +25,8 @@ var api_instance = RegisterApi();
 var user = User(); // User | 
 
 try { 
-    api_instance.createUser(user);
+    var result = api_instance.createUser(user);
+    print(result);
 } catch (e) {
     print("Exception when calling RegisterApi->createUser: $e\n");
 }
@@ -39,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**User**](User.md)
 
 ### Authorization
 
@@ -48,7 +49,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -60,7 +60,7 @@ class UserApi {
   ///  with HTTP info returned
   ///
   ///
-  Future getAllUsersWithHttpInfo() async {
+  Future<Response> getAllUsersWithHttpInfo() async {
     Object postBody;
 
     // verify required params are set
@@ -94,20 +94,21 @@ class UserApi {
   ///
   ///
   ///
-  Future getAllUsers() async {
+  Future<User> getAllUsers() async {
     Response response = await getAllUsersWithHttpInfo();
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
+      return apiClient.deserialize(_decodeBodyBytes(response), 'User') as User;
     } else {
-      return;
+      return null;
     }
   }
 
   ///  with HTTP info returned
   ///
   ///
-  Future getUserWithHttpInfo(int id) async {
+  Future<Response> getUserWithHttpInfo(int id) async {
     Object postBody;
 
     // verify required params are set
@@ -146,13 +147,14 @@ class UserApi {
   ///
   ///
   ///
-  Future getUser(int id) async {
+  Future<User> getUser(int id) async {
     Response response = await getUserWithHttpInfo(id);
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
+      return apiClient.deserialize(_decodeBodyBytes(response), 'User') as User;
     } else {
-      return;
+      return null;
     }
   }
 

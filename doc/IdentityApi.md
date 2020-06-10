@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **getIdentity**
-> getIdentity()
+> User getIdentity()
 
 
 
@@ -26,7 +26,8 @@ import 'package:genie_client_dart/api.dart';
 var api_instance = IdentityApi();
 
 try { 
-    api_instance.getIdentity();
+    var result = api_instance.getIdentity();
+    print(result);
 } catch (e) {
     print("Exception when calling IdentityApi->getIdentity: $e\n");
 }
@@ -37,7 +38,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**User**](User.md)
 
 ### Authorization
 

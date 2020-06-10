@@ -9,7 +9,7 @@ class RegisterApi {
   ///  with HTTP info returned
   ///
   ///
-  Future createUserWithHttpInfo(User user) async {
+  Future<Response> createUserWithHttpInfo(User user) async {
     Object postBody = user;
 
     // verify required params are set
@@ -46,13 +46,14 @@ class RegisterApi {
   ///
   ///
   ///
-  Future createUser(User user) async {
+  Future<User> createUser(User user) async {
     Response response = await createUserWithHttpInfo(user);
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
+      return apiClient.deserialize(_decodeBodyBytes(response), 'User') as User;
     } else {
-      return;
+      return null;
     }
   }
 }

@@ -1,9 +1,9 @@
 name: genie_client_dart
-version: 0.1.1
+version: 0.1.2
 description: A dart client for the genie_api project
 authors:
-  - Author <author@homepage>
-homepage: homepage
+  - Brandan Schmitz <brandan.schmitz@celestialdata.net>
+homepage: https://github.com/brandan-schmitz/genie_client_dart
 environment:
   sdk: '>=2.0.0 <3.0.0'
 dependencies:

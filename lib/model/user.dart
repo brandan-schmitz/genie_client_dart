@@ -14,15 +14,11 @@ class User {
   int id = null;
   /* No two objects may have the same value for this field.  */
   String username = null;
-
-  List<Makerspace> makerspacesOwned = [];
-
-  List<ManagedAuthToken> tokens = [];
   User();
 
   @override
   String toString() {
-    return 'User[password=$password, firstName=$firstName, lastName=$lastName, email=$email, profilePictureUrl=$profilePictureUrl, id=$id, username=$username, makerspacesOwned=$makerspacesOwned, tokens=$tokens, ]';
+    return 'User[password=$password, firstName=$firstName, lastName=$lastName, email=$email, profilePictureUrl=$profilePictureUrl, id=$id, username=$username, ]';
   }
 
   User.fromJson(Map<String, dynamic> json) {
@@ -34,12 +30,6 @@ class User {
     profilePictureUrl = json['profilePictureUrl'];
     id = json['id'];
     username = json['username'];
-    makerspacesOwned = (json['makerspacesOwned'] == null)
-        ? null
-        : Makerspace.listFromJson(json['makerspacesOwned']);
-    tokens = (json['tokens'] == null)
-        ? null
-        : ManagedAuthToken.listFromJson(json['tokens']);
   }
 
   Map<String, dynamic> toJson() {
@@ -51,8 +41,6 @@ class User {
     json['profilePictureUrl'] = profilePictureUrl;
     if (id != null) json['id'] = id;
     if (username != null) json['username'] = username;
-    json['makerspacesOwned'] = makerspacesOwned;
-    json['tokens'] = tokens;
     return json;
   }
 

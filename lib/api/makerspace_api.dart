@@ -111,7 +111,7 @@ class MakerspaceApi {
   ///  with HTTP info returned
   ///
   ///
-  Future getAllMakerspacesWithHttpInfo() async {
+  Future<Response> getAllMakerspacesWithHttpInfo() async {
     Object postBody;
 
     // verify required params are set
@@ -145,20 +145,22 @@ class MakerspaceApi {
   ///
   ///
   ///
-  Future getAllMakerspaces() async {
+  Future<Makerspace> getAllMakerspaces() async {
     Response response = await getAllMakerspacesWithHttpInfo();
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
+      return apiClient.deserialize(_decodeBodyBytes(response), 'Makerspace')
+          as Makerspace;
     } else {
-      return;
+      return null;
     }
   }
 
   ///  with HTTP info returned
   ///
   ///
-  Future getMakerspaceWithHttpInfo(int id) async {
+  Future<Response> getMakerspaceWithHttpInfo(int id) async {
     Object postBody;
 
     // verify required params are set
@@ -197,20 +199,23 @@ class MakerspaceApi {
   ///
   ///
   ///
-  Future getMakerspace(int id) async {
+  Future<Makerspace> getMakerspace(int id) async {
     Response response = await getMakerspaceWithHttpInfo(id);
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
+      return apiClient.deserialize(_decodeBodyBytes(response), 'Makerspace')
+          as Makerspace;
     } else {
-      return;
+      return null;
     }
   }
 
   ///  with HTTP info returned
   ///
   ///
-  Future updateMakerspaceWithHttpInfo(int id, Makerspace makerspace) async {
+  Future<Response> updateMakerspaceWithHttpInfo(
+      int id, Makerspace makerspace) async {
     Object postBody = makerspace;
 
     // verify required params are set
@@ -252,13 +257,15 @@ class MakerspaceApi {
   ///
   ///
   ///
-  Future updateMakerspace(int id, Makerspace makerspace) async {
+  Future<Makerspace> updateMakerspace(int id, Makerspace makerspace) async {
     Response response = await updateMakerspaceWithHttpInfo(id, makerspace);
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
+      return apiClient.deserialize(_decodeBodyBytes(response), 'Makerspace')
+          as Makerspace;
     } else {
-      return;
+      return null;
     }
   }
 }

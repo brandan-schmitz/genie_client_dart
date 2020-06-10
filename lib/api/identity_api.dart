@@ -9,7 +9,7 @@ class IdentityApi {
   ///  with HTTP info returned
   ///
   ///
-  Future getIdentityWithHttpInfo() async {
+  Future<Response> getIdentityWithHttpInfo() async {
     Object postBody;
 
     // verify required params are set
@@ -43,13 +43,14 @@ class IdentityApi {
   ///
   ///
   ///
-  Future getIdentity() async {
+  Future<User> getIdentity() async {
     Response response = await getIdentityWithHttpInfo();
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
+      return apiClient.deserialize(_decodeBodyBytes(response), 'User') as User;
     } else {
-      return;
+      return null;
     }
   }
 }

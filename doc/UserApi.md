@@ -58,7 +58,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getAllUsers**
-> getAllUsers()
+> User getAllUsers()
 
 
 
@@ -71,7 +71,8 @@ import 'package:genie_client_dart/api.dart';
 var api_instance = UserApi();
 
 try { 
-    api_instance.getAllUsers();
+    var result = api_instance.getAllUsers();
+    print(result);
 } catch (e) {
     print("Exception when calling UserApi->getAllUsers: $e\n");
 }
@@ -82,7 +83,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**User**](User.md)
 
 ### Authorization
 
@@ -96,7 +97,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getUser**
-> getUser(id)
+> User getUser(id)
 
 
 
@@ -110,7 +111,8 @@ var api_instance = UserApi();
 var id = 56; // int | 
 
 try { 
-    api_instance.getUser(id);
+    var result = api_instance.getUser(id);
+    print(result);
 } catch (e) {
     print("Exception when calling UserApi->getUser: $e\n");
 }
@@ -124,7 +126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**User**](User.md)
 
 ### Authorization
 

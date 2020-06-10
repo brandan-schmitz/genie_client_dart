@@ -101,7 +101,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getAllMakerspaces**
-> getAllMakerspaces()
+> Makerspace getAllMakerspaces()
 
 
 
@@ -114,7 +114,8 @@ import 'package:genie_client_dart/api.dart';
 var api_instance = MakerspaceApi();
 
 try { 
-    api_instance.getAllMakerspaces();
+    var result = api_instance.getAllMakerspaces();
+    print(result);
 } catch (e) {
     print("Exception when calling MakerspaceApi->getAllMakerspaces: $e\n");
 }
@@ -125,7 +126,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**Makerspace**](Makerspace.md)
 
 ### Authorization
 
@@ -139,7 +140,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getMakerspace**
-> getMakerspace(id)
+> Makerspace getMakerspace(id)
 
 
 
@@ -153,7 +154,8 @@ var api_instance = MakerspaceApi();
 var id = 56; // int | 
 
 try { 
-    api_instance.getMakerspace(id);
+    var result = api_instance.getMakerspace(id);
+    print(result);
 } catch (e) {
     print("Exception when calling MakerspaceApi->getMakerspace: $e\n");
 }
@@ -167,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Makerspace**](Makerspace.md)
 
 ### Authorization
 
@@ -181,7 +183,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **updateMakerspace**
-> updateMakerspace(id, makerspace)
+> Makerspace updateMakerspace(id, makerspace)
 
 
 
@@ -196,7 +198,8 @@ var id = 56; // int |
 var makerspace = Makerspace(); // Makerspace | 
 
 try { 
-    api_instance.updateMakerspace(id, makerspace);
+    var result = api_instance.updateMakerspace(id, makerspace);
+    print(result);
 } catch (e) {
     print("Exception when calling MakerspaceApi->updateMakerspace: $e\n");
 }
@@ -211,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Makerspace**](Makerspace.md)
 
 ### Authorization
 
