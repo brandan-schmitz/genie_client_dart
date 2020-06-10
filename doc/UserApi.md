@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**deleteUser**](UserApi.md#deleteUser) | **DELETE** /users/{id} | 
 [**getAllUsers**](UserApi.md#getAllUsers) | **GET** /users | 
 [**getUser**](UserApi.md#getUser) | **GET** /users/{id} | 
-[**updateUser**](UserApi.md#updateUser) | **PUT** /users/{id} | 
+[**updateUser**](UserApi.md#updateUser) | **PATCH** /users/{id} | 
 
 
 # **deleteUser**
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **updateUser**
-> updateUser(id, user)
+> User updateUser(id, user)
 
 
 
@@ -155,7 +155,8 @@ var id = 56; // int |
 var user = User(); // User | 
 
 try { 
-    api_instance.updateUser(id, user);
+    var result = api_instance.updateUser(id, user);
+    print(result);
 } catch (e) {
     print("Exception when calling UserApi->updateUser: $e\n");
 }
@@ -170,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**User**](User.md)
 
 ### Authorization
 

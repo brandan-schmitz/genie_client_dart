@@ -9,7 +9,7 @@ class MakerspaceApi {
   ///  with HTTP info returned
   ///
   ///
-  Future createMakerspaceWithHttpInfo(Makerspace makerspace) async {
+  Future<Response> createMakerspaceWithHttpInfo(Makerspace makerspace) async {
     Object postBody = makerspace;
 
     // verify required params are set
@@ -46,13 +46,15 @@ class MakerspaceApi {
   ///
   ///
   ///
-  Future createMakerspace(Makerspace makerspace) async {
+  Future<Makerspace> createMakerspace(Makerspace makerspace) async {
     Response response = await createMakerspaceWithHttpInfo(makerspace);
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
+      return apiClient.deserialize(_decodeBodyBytes(response), 'Makerspace')
+          as Makerspace;
     } else {
-      return;
+      return null;
     }
   }
 

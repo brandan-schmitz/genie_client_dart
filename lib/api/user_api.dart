@@ -161,7 +161,7 @@ class UserApi {
   ///  with HTTP info returned
   ///
   ///
-  Future updateUserWithHttpInfo(int id, User user) async {
+  Future<Response> updateUserWithHttpInfo(int id, User user) async {
     Object postBody = user;
 
     // verify required params are set
@@ -195,21 +195,22 @@ class UserApi {
       if (hasFields) postBody = mp;
     } else {}
 
-    var response = await apiClient.invokeAPI(path, 'PUT', queryParams, postBody,
-        headerParams, formParams, nullableContentType, authNames);
+    var response = await apiClient.invokeAPI(path, 'PATCH', queryParams,
+        postBody, headerParams, formParams, nullableContentType, authNames);
     return response;
   }
 
   ///
   ///
   ///
-  Future updateUser(int id, User user) async {
+  Future<User> updateUser(int id, User user) async {
     Response response = await updateUserWithHttpInfo(id, user);
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
+      return apiClient.deserialize(_decodeBodyBytes(response), 'User') as User;
     } else {
-      return;
+      return null;
     }
   }
 }

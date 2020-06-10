@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **createMakerspace**
-> createMakerspace(makerspace)
+> Makerspace createMakerspace(makerspace)
 
 
 
@@ -31,7 +31,8 @@ var api_instance = MakerspaceApi();
 var makerspace = Makerspace(); // Makerspace | 
 
 try { 
-    api_instance.createMakerspace(makerspace);
+    var result = api_instance.createMakerspace(makerspace);
+    print(result);
 } catch (e) {
     print("Exception when calling MakerspaceApi->createMakerspace: $e\n");
 }
@@ -45,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Makerspace**](Makerspace.md)
 
 ### Authorization
 
