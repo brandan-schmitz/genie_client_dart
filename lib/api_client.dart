@@ -103,7 +103,7 @@ class ApiClient {
 
   // We don't use a Map<String, String> for queryParams.
   // If collectionFormat is 'multi' a key might appear multiple times.
-  Future<Response> invokeAPI(
+  Future<http.Response> invokeAPI(
       String path,
       String method,
       Iterable<QueryParam> queryParams,
@@ -128,14 +128,14 @@ class ApiClient {
       headerParams['Content-Type'] = contentType;
     }
 
-    if (body is MultipartRequest) {
-      var request = MultipartRequest(method, Uri.parse(url));
+    if (body is http.MultipartRequest) {
+      var request = http.MultipartRequest(method, Uri.parse(url));
       request.fields.addAll(body.fields);
       request.files.addAll(body.files);
       request.headers.addAll(body.headers);
       request.headers.addAll(headerParams);
       var response = await client.send(request);
-      return Response.fromStream(response);
+      return http.Response.fromStream(response);
     } else {
       var msgBody = nullableContentType == "application/x-www-form-urlencoded"
           ? formParams
