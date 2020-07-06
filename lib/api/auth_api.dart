@@ -8,7 +8,7 @@ class AuthApi {
   ///  with HTTP info returned
   ///
   ///
-  Future<Response> grantWithHttpInfo(String grantType,
+  Future<http.Response> grantWithHttpInfo(String grantType,
       {String username,
       String password,
       String refreshToken,
@@ -38,7 +38,7 @@ class AuthApi {
     if (nullableContentType != null &&
         nullableContentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = MultipartRequest(null, null);
+      http.MultipartRequest mp = http.MultipartRequest(null, null);
       if (username != null) {
         hasFields = true;
         mp.fields['username'] = parameterToString(username);
@@ -91,7 +91,7 @@ class AuthApi {
       String refreshToken,
       String code,
       String scope}) async {
-    Response response = await grantWithHttpInfo(grantType,
+    http.Response response = await grantWithHttpInfo(grantType,
         username: username,
         password: password,
         refreshToken: refreshToken,

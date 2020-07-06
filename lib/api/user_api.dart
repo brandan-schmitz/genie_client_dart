@@ -35,7 +35,7 @@ class UserApi {
     if (nullableContentType != null &&
         nullableContentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = MultipartRequest(null, null);
+      http.MultipartRequest mp = http.MultipartRequest(null, null);
       if (hasFields) postBody = mp;
     } else {}
 
@@ -48,7 +48,7 @@ class UserApi {
   ///
   ///
   Future deleteUser(int id) async {
-    Response response = await deleteUserWithHttpInfo(id);
+    http.Response response = await deleteUserWithHttpInfo(id);
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
@@ -60,7 +60,7 @@ class UserApi {
   ///  with HTTP info returned
   ///
   ///
-  Future<Response> getAllUsersWithHttpInfo() async {
+  Future<http.Response> getAllUsersWithHttpInfo() async {
     Object postBody;
 
     // verify required params are set
@@ -82,7 +82,7 @@ class UserApi {
     if (nullableContentType != null &&
         nullableContentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = MultipartRequest(null, null);
+      http.MultipartRequest mp = http.MultipartRequest(null, null);
       if (hasFields) postBody = mp;
     } else {}
 
@@ -95,7 +95,7 @@ class UserApi {
   ///
   ///
   Future<User> getAllUsers() async {
-    Response response = await getAllUsersWithHttpInfo();
+    http.Response response = await getAllUsersWithHttpInfo();
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
@@ -108,7 +108,7 @@ class UserApi {
   ///  with HTTP info returned
   ///
   ///
-  Future<Response> getUserWithHttpInfo(int id) async {
+  Future<http.Response> getUserWithHttpInfo(int id) async {
     Object postBody;
 
     // verify required params are set
@@ -135,7 +135,7 @@ class UserApi {
     if (nullableContentType != null &&
         nullableContentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = MultipartRequest(null, null);
+      http.MultipartRequest mp = http.MultipartRequest(null, null);
       if (hasFields) postBody = mp;
     } else {}
 
@@ -148,7 +148,7 @@ class UserApi {
   ///
   ///
   Future<User> getUser(int id) async {
-    Response response = await getUserWithHttpInfo(id);
+    http.Response response = await getUserWithHttpInfo(id);
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
@@ -161,7 +161,7 @@ class UserApi {
   ///  with HTTP info returned
   ///
   ///
-  Future<Response> updateUserWithHttpInfo(int id, User user) async {
+  Future<http.Response> updateUserWithHttpInfo(int id, User user) async {
     Object postBody = user;
 
     // verify required params are set
@@ -191,7 +191,7 @@ class UserApi {
     if (nullableContentType != null &&
         nullableContentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = MultipartRequest(null, null);
+      http.MultipartRequest mp = http.MultipartRequest(null, null);
       if (hasFields) postBody = mp;
     } else {}
 
@@ -204,7 +204,7 @@ class UserApi {
   ///
   ///
   Future<User> updateUser(int id, User user) async {
-    Response response = await updateUserWithHttpInfo(id, user);
+    http.Response response = await updateUserWithHttpInfo(id, user);
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {

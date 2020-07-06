@@ -9,7 +9,7 @@ class MakerspaceApi {
   ///  with HTTP info returned
   ///
   ///
-  Future<Response> createMakerspaceWithHttpInfo(Makerspace makerspace) async {
+  Future<http.Response> createMakerspaceWithHttpInfo(Makerspace makerspace) async {
     Object postBody = makerspace;
 
     // verify required params are set
@@ -34,7 +34,7 @@ class MakerspaceApi {
     if (nullableContentType != null &&
         nullableContentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = MultipartRequest(null, null);
+      http.MultipartRequest mp = http.MultipartRequest(null, null);
       if (hasFields) postBody = mp;
     } else {}
 
@@ -47,7 +47,7 @@ class MakerspaceApi {
   ///
   ///
   Future<Makerspace> createMakerspace(Makerspace makerspace) async {
-    Response response = await createMakerspaceWithHttpInfo(makerspace);
+    http.Response response = await createMakerspaceWithHttpInfo(makerspace);
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
@@ -88,7 +88,7 @@ class MakerspaceApi {
     if (nullableContentType != null &&
         nullableContentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = MultipartRequest(null, null);
+      http.MultipartRequest mp = http.MultipartRequest(null, null);
       if (hasFields) postBody = mp;
     } else {}
 
@@ -101,7 +101,7 @@ class MakerspaceApi {
   ///
   ///
   Future deleteMakerspace(int id) async {
-    Response response = await deleteMakerspaceWithHttpInfo(id);
+    http.Response response = await deleteMakerspaceWithHttpInfo(id);
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
@@ -113,7 +113,7 @@ class MakerspaceApi {
   ///  with HTTP info returned
   ///
   ///
-  Future<Response> getAllMakerspacesWithHttpInfo() async {
+  Future<http.Response> getAllMakerspacesWithHttpInfo() async {
     Object postBody;
 
     // verify required params are set
@@ -135,7 +135,7 @@ class MakerspaceApi {
     if (nullableContentType != null &&
         nullableContentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = MultipartRequest(null, null);
+      http.MultipartRequest mp = http.MultipartRequest(null, null);
       if (hasFields) postBody = mp;
     } else {}
 
@@ -148,7 +148,7 @@ class MakerspaceApi {
   ///
   ///
   Future<Makerspace> getAllMakerspaces() async {
-    Response response = await getAllMakerspacesWithHttpInfo();
+    http.Response response = await getAllMakerspacesWithHttpInfo();
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
@@ -162,7 +162,7 @@ class MakerspaceApi {
   ///  with HTTP info returned
   ///
   ///
-  Future<Response> getMakerspaceWithHttpInfo(int id) async {
+  Future<http.Response> getMakerspaceWithHttpInfo(int id) async {
     Object postBody;
 
     // verify required params are set
@@ -189,7 +189,7 @@ class MakerspaceApi {
     if (nullableContentType != null &&
         nullableContentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = MultipartRequest(null, null);
+      http.MultipartRequest mp = http.MultipartRequest(null, null);
       if (hasFields) postBody = mp;
     } else {}
 
@@ -202,7 +202,7 @@ class MakerspaceApi {
   ///
   ///
   Future<Makerspace> getMakerspace(int id) async {
-    Response response = await getMakerspaceWithHttpInfo(id);
+    http.Response response = await getMakerspaceWithHttpInfo(id);
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
@@ -216,7 +216,7 @@ class MakerspaceApi {
   ///  with HTTP info returned
   ///
   ///
-  Future<Response> updateMakerspaceWithHttpInfo(
+  Future<http.Response> updateMakerspaceWithHttpInfo(
       int id, Makerspace makerspace) async {
     Object postBody = makerspace;
 
@@ -247,7 +247,7 @@ class MakerspaceApi {
     if (nullableContentType != null &&
         nullableContentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = MultipartRequest(null, null);
+      http.MultipartRequest mp = http.MultipartRequest(null, null);
       if (hasFields) postBody = mp;
     } else {}
 
@@ -260,7 +260,7 @@ class MakerspaceApi {
   ///
   ///
   Future<Makerspace> updateMakerspace(int id, Makerspace makerspace) async {
-    Response response = await updateMakerspaceWithHttpInfo(id, makerspace);
+    http.Response response = await updateMakerspaceWithHttpInfo(id, makerspace);
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {

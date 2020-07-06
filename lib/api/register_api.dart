@@ -9,7 +9,7 @@ class RegisterApi {
   ///  with HTTP info returned
   ///
   ///
-  Future<Response> createUserWithHttpInfo(User user) async {
+  Future<http.Response> createUserWithHttpInfo(User user) async {
     Object postBody = user;
 
     // verify required params are set
@@ -34,7 +34,7 @@ class RegisterApi {
     if (nullableContentType != null &&
         nullableContentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = MultipartRequest(null, null);
+      http.MultipartRequest mp = http.MultipartRequest(null, null);
       if (hasFields) postBody = mp;
     } else {}
 
@@ -47,7 +47,7 @@ class RegisterApi {
   ///
   ///
   Future<User> createUser(User user) async {
-    Response response = await createUserWithHttpInfo(user);
+    http.Response response = await createUserWithHttpInfo(user);
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {

@@ -2,7 +2,7 @@ library genie_client_dart.api;
 
 import 'dart:async';
 import 'dart:convert';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 
 part 'api_client.dart';
 part 'api_helper.dart';

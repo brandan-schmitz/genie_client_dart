@@ -9,7 +9,7 @@ class QueryParam {
 
 class ApiClient {
   String basePath;
-  var client = Client();
+  var client = http.Client();
 
   Map<String, String> _defaultHeaderMap = {};
   Map<String, Authentication> _authentications = {};

@@ -9,7 +9,7 @@ class IdentityApi {
   ///  with HTTP info returned
   ///
   ///
-  Future<Response> getIdentityWithHttpInfo() async {
+  Future<http.Response> getIdentityWithHttpInfo() async {
     Object postBody;
 
     // verify required params are set
@@ -31,7 +31,7 @@ class IdentityApi {
     if (nullableContentType != null &&
         nullableContentType.startsWith("multipart/form-data")) {
       bool hasFields = false;
-      MultipartRequest mp = MultipartRequest(null, null);
+      http.MultipartRequest mp = http.MultipartRequest(null, null);
       if (hasFields) postBody = mp;
     } else {}
 
@@ -44,7 +44,7 @@ class IdentityApi {
   ///
   ///
   Future<User> getIdentity() async {
-    Response response = await getIdentityWithHttpInfo();
+    http.Response response = await getIdentityWithHttpInfo();
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
