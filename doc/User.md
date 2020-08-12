@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **password** | **String** |  | [optional] [default to null]
 **firstName** | **String** |  | [optional] [default to null]
 **lastName** | **String** |  | [optional] [default to null]
-**email** | **String** |  | [optional] [default to null]
+**email** | **String** | No two objects may have the same value for this field.  | [optional] [default to null]
 **profilePictureUrl** | **String** |  | [optional] [default to null]
 **id** | **int** | This is the primary identifier for this object.  | [optional] [default to null]
 **username** | **String** | No two objects may have the same value for this field.  | [optional] [default to null]

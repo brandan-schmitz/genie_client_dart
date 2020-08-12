@@ -102,7 +102,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getAllMakerspaces**
-> Makerspace getAllMakerspaces()
+> List<Makerspace> getAllMakerspaces()
 
 
 
@@ -127,7 +127,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Makerspace**](Makerspace.md)
+[**List<Makerspace>**](Makerspace.md)
 
 ### Authorization
 

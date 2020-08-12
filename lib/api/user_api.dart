@@ -94,12 +94,15 @@ class UserApi {
   ///
   ///
   ///
-  Future<User> getAllUsers() async {
+  Future<List<User>> getAllUsers() async {
     http.Response response = await getAllUsersWithHttpInfo();
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
-      return apiClient.deserialize(_decodeBodyBytes(response), 'User') as User;
+      return (apiClient.deserialize(_decodeBodyBytes(response), 'List<User>')
+              as List)
+          .map((item) => item as User)
+          .toList();
     } else {
       return null;
     }

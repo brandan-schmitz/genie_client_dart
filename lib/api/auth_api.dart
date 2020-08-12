@@ -22,7 +22,7 @@ class AuthApi {
     }
 
     // create path and map variables
-    String path = "/login".replaceAll("{format}", "json");
+    String path = "/auth/token".replaceAll("{format}", "json");
 
     // query params
     List<QueryParam> queryParams = [];

@@ -9,7 +9,7 @@ All URIs are relative to *https://genie-api-dev.celestialdata.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**grant**](AuthApi.md#grant) | **POST** /login | 
+[**grant**](AuthApi.md#grant) | **POST** /auth/token | 
 
 
 # **grant**

@@ -147,13 +147,15 @@ class MakerspaceApi {
   ///
   ///
   ///
-  Future<Makerspace> getAllMakerspaces() async {
+  Future<List<Makerspace>> getAllMakerspaces() async {
     http.Response response = await getAllMakerspacesWithHttpInfo();
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
-      return apiClient.deserialize(_decodeBodyBytes(response), 'Makerspace')
-          as Makerspace;
+      return (apiClient.deserialize(
+              _decodeBodyBytes(response), 'List<Makerspace>') as List)
+          .map((item) => item as Makerspace)
+          .toList();
     } else {
       return null;
     }

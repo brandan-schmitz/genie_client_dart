@@ -6,7 +6,7 @@ class User {
   String firstName = null;
 
   String lastName = null;
-
+  /* No two objects may have the same value for this field.  */
   String email = null;
 
   String profilePictureUrl = null;
