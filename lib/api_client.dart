@@ -17,7 +17,7 @@ class ApiClient {
   final _regList = RegExp(r'^List<(.*)>$');
   final _regMap = RegExp(r'^Map<String,(.*)>$');
 
-  ApiClient({this.basePath = "https://genie-api-dev.celestialdata.net"}) {
+  ApiClient({this.basePath = "https://genie-api-dev.makerspacegenie.app"}) {
     // Setup authentications (key: authentication name, value: authentication).
     _authentications['oauth2'] = OAuth();
     _authentications['oauth2-client-authentication'] = HttpBasicAuth();

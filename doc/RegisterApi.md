@@ -5,7 +5,7 @@
 import 'package:genie_client_dart/api.dart';
 ```
 
-All URIs are relative to *https://genie-api-dev.celestialdata.net*
+All URIs are relative to *https://genie-api-dev.makerspacegenie.app*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
