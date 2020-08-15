@@ -16,6 +16,7 @@ part 'auth/http_bearer_auth.dart';
 part 'api/auth_api.dart';
 part 'api/identity_api.dart';
 part 'api/makerspace_api.dart';
+part 'api/password_reset_api.dart';
 part 'api/register_api.dart';
 part 'api/user_api.dart';
 
@@ -27,6 +28,7 @@ part 'model/inline_response403.dart';
 part 'model/makerspace.dart';
 part 'model/managed_auth_client.dart';
 part 'model/managed_auth_token.dart';
+part 'model/password_reset_token.dart';
 part 'model/resource_owner.dart';
 part 'model/user.dart';
 

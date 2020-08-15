@@ -54,6 +54,8 @@ class ApiClient {
           return ManagedAuthClient.fromJson(value);
         case 'ManagedAuthToken':
           return ManagedAuthToken.fromJson(value);
+        case 'PasswordResetToken':
+          return PasswordResetToken.fromJson(value);
         case 'ResourceOwner':
           return ResourceOwner.fromJson(value);
         case 'User':

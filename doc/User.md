@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **profilePictureUrl** | **String** |  | [optional] [default to null]
 **id** | **int** | This is the primary identifier for this object.  | [optional] [default to null]
 **username** | **String** | No two objects may have the same value for this field.  | [optional] [default to null]
+**passwordResetTokens** | [**List&lt;PasswordResetToken&gt;**](PasswordResetToken.md) |  | [optional] [readonly] [default to []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

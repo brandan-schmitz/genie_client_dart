@@ -14,11 +14,13 @@ class User {
   int id = null;
   /* No two objects may have the same value for this field.  */
   String username = null;
+
+  List<PasswordResetToken> passwordResetTokens = [];
   User();
 
   @override
   String toString() {
-    return 'User[password=$password, firstName=$firstName, lastName=$lastName, email=$email, profilePictureUrl=$profilePictureUrl, id=$id, username=$username, ]';
+    return 'User[password=$password, firstName=$firstName, lastName=$lastName, email=$email, profilePictureUrl=$profilePictureUrl, id=$id, username=$username, passwordResetTokens=$passwordResetTokens, ]';
   }
 
   User.fromJson(Map<String, dynamic> json) {
@@ -30,6 +32,9 @@ class User {
     profilePictureUrl = json['profilePictureUrl'];
     id = json['id'];
     username = json['username'];
+    passwordResetTokens = (json['passwordResetTokens'] == null)
+        ? null
+        : PasswordResetToken.listFromJson(json['passwordResetTokens']);
   }
 
   Map<String, dynamic> toJson() {
@@ -41,6 +46,7 @@ class User {
     json['profilePictureUrl'] = profilePictureUrl;
     if (id != null) json['id'] = id;
     if (username != null) json['username'] = username;
+    json['passwordResetTokens'] = passwordResetTokens;
     return json;
   }
 
