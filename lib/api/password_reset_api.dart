@@ -9,7 +9,8 @@ class PasswordResetApi {
   ///  with HTTP info returned
   ///
   ///
-  Future changePasswordWithHttpInfo(String token, String newPassword) async {
+  Future<http.Response> changePasswordWithHttpInfo(
+      String token, String newPassword) async {
     Object postBody;
 
     // verify required params are set
@@ -53,13 +54,15 @@ class PasswordResetApi {
   ///
   ///
   ///
-  Future changePassword(String token, String newPassword) async {
+  Future<AnyType> changePassword(String token, String newPassword) async {
     http.Response response = await changePasswordWithHttpInfo(token, newPassword);
     if (response.statusCode >= 400) {
       throw ApiException(response.statusCode, _decodeBodyBytes(response));
     } else if (response.body != null) {
+      return apiClient.deserialize(_decodeBodyBytes(response), 'AnyType')
+          as AnyType;
     } else {
-      return;
+      return null;
     }
   }
 

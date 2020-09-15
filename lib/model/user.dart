@@ -15,12 +15,12 @@ class User {
   /* No two objects may have the same value for this field.  */
   String username = null;
 
-  List<PasswordResetToken> passwordResetTokens = [];
+  Makerspace makerspacesOwned = null;
   User();
 
   @override
   String toString() {
-    return 'User[password=$password, firstName=$firstName, lastName=$lastName, email=$email, profilePictureUrl=$profilePictureUrl, id=$id, username=$username, passwordResetTokens=$passwordResetTokens, ]';
+    return 'User[password=$password, firstName=$firstName, lastName=$lastName, email=$email, profilePictureUrl=$profilePictureUrl, id=$id, username=$username, makerspacesOwned=$makerspacesOwned, ]';
   }
 
   User.fromJson(Map<String, dynamic> json) {
@@ -32,9 +32,9 @@ class User {
     profilePictureUrl = json['profilePictureUrl'];
     id = json['id'];
     username = json['username'];
-    passwordResetTokens = (json['passwordResetTokens'] == null)
+    makerspacesOwned = (json['makerspacesOwned'] == null)
         ? null
-        : PasswordResetToken.listFromJson(json['passwordResetTokens']);
+        : Makerspace.fromJson(json['makerspacesOwned']);
   }
 
   Map<String, dynamic> toJson() {
@@ -46,7 +46,7 @@ class User {
     json['profilePictureUrl'] = profilePictureUrl;
     if (id != null) json['id'] = id;
     if (username != null) json['username'] = username;
-    json['passwordResetTokens'] = passwordResetTokens;
+    if (makerspacesOwned != null) json['makerspacesOwned'] = makerspacesOwned;
     return json;
   }
 

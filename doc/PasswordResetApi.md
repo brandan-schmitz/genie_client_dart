@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **changePassword**
-> changePassword(token, newPassword)
+> AnyType changePassword(token, newPassword)
 
 
 
@@ -27,7 +27,8 @@ var token = token_example; // String |
 var newPassword = newPassword_example; // String | 
 
 try { 
-    api_instance.changePassword(token, newPassword);
+    var result = api_instance.changePassword(token, newPassword);
+    print(result);
 } catch (e) {
     print("Exception when calling PasswordResetApi->changePassword: $e\n");
 }
@@ -42,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**AnyType**](AnyType.md)
 
 ### Authorization
 
@@ -51,7 +52,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
